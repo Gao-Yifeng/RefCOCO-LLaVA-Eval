@@ -355,6 +355,8 @@ if __name__ == '__main__':
     tokenizer, model, image_processor, context_len = load_pretrained_model(
         args.model_path, None, args.model_name, False, False, device="cuda"
     )
+    # TODO: sparse config
+    configure_sparse(model, args)
 
     #FIXME
     image_size = 448
