@@ -51,6 +51,7 @@ conda activate SparseVLMs
 pip install -e .
 pip install transformers==4.37.0
 pip install flash_attn==2.3.3
+% Note: SparseVLM has recently updated its implementation to SparseVLM-1.5.
 ```
 
 
