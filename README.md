@@ -42,3 +42,15 @@ extract COCO [train2014.zip](http://images.cocodataset.org/zips/train2014.zip) t
 # Modify model path in eval.sh
 bash eval.sh
 ```
+
+## SparseVLM
+### Preparation
+```bash
+conda create -n SparseVLMs python=3.10 -y
+conda activate SparseVLMs
+pip install -e .
+pip install transformers==4.37.0
+pip install flash_attn==2.3.3
+```
+
+
