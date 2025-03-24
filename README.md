@@ -74,3 +74,9 @@ pip install -e . # also apply Random and Pooling
 bash eval_fastv_random_pooling.sh
 ```
 
+### Core implementation
+See https://github.com/Gao-Yifeng/RefCOCO-LLaVA-Eval/blob/main/LLaVA_FastV/llava/model/language_model/modeling_llama_self.py
+- Line 229: FastV
+- Line 404: Random
+- Line 574: Window Pooling
+
