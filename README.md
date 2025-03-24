@@ -53,5 +53,24 @@ pip install transformers==4.37.0
 pip install flash_attn==2.3.3
 % Note: SparseVLM has recently updated its implementation to SparseVLM-1.5.
 ```
+### Evaluation
+```bash
+# Modify model path in script
+bash evaluate_grounding_sparsevlm.sh
+```
 
+## FastV, Random and Pooling
+### Preparation
+```bash
+conda create -n FastV --clone refcoco
+conda activate FastV 
+cd LLaVA_FastV
+pip install -e . # also apply Random and Pooling
+```
+
+### Evaluation
+```bash
+# Modify model path in script
+bash eval_fastv_random_pooling.sh
+```
 
