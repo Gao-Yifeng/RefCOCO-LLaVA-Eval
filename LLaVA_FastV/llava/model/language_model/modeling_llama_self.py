@@ -313,7 +313,7 @@ class FastV(LlamaModel):
         all_self_attns = () if output_attentions else None
         next_decoder_cache = None
 
-        print(f"using fastv!!!")
+        # print(f"using fastv!!!")
         for decoder_layer in self.layers:
             if output_hidden_states:
                 all_hidden_states += (hidden_states,)
@@ -344,7 +344,7 @@ class FastV(LlamaModel):
 
                     image_attention_score = self.last_attention.mean(dim=1)[0][-1][image_start:image_end] 
 
-                    top_attention_rank_index = image_attention_score.topk(int(image_token_length * ratio)).indices + image_start
+                    top_attention_rank_index = image_attention_score.topk(int(image_token_length * (1 - ratio))).indices + image_start
 
                     keep_indexs = torch.cat((torch.arange(image_start,device=device), top_attention_rank_index, torch.arange(image_end,seq_length,device=device)))
                     keep_indexs = keep_indexs.sort().values
