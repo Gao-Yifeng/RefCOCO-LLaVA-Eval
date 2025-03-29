@@ -517,7 +517,7 @@ class Random(LlamaModel):
                     # print(f"using random!!!")
                     device = hidden_states.device
 
-                    image_indexs = random.sample(range(image_token_start_index, image_token_start_index + image_token_length), (pruning_ratio * image_token_length))
+                    image_indexs = random.sample(range(image_token_start_index, image_token_start_index + image_token_length), ((1 - pruning_ratio) * image_token_length))
 
                     indexs_set = set(image_indexs)
 
